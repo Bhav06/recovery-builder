@@ -17,6 +17,8 @@ env:
   DEVICE: vince
   DT_LINK: https://github.com/Bhav06/device_xiaomi_vince_twrp.git
   DT_PATH: device/xiaomi/vince
+  COMMON_LINK: https://github.com/Mi-Thorium/twrp_device_xiaomi_mithorium-common.git
+  COMMON_PATH: device/xiaomi/mithorium-common
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
