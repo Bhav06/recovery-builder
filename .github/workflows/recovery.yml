@@ -15,10 +15,8 @@ on:
 env:
   MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-12.1
   DEVICE: vince
-  DT_LINK: https://github.com/Bhav06/device_xiaomi_vince_twrp.git
+  DT_LINK: https://github.com/rk134/android_device_xiaomi_vince-twrp.git
   DT_PATH: device/xiaomi/vince
-  COMMON_LINK: https://github.com/Mi-Thorium/twrp_device_xiaomi_mithorium-common.git
-  COMMON_PATH: device/xiaomi/mithorium-common
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
