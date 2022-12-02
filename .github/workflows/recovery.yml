@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-10.0-deprecated
   DEVICE: vince
   DT_LINK: https://github.com/Bhav06/android_device_xiaomi_vince-twrp.git
   DT_PATH: device/xiaomi/vince
@@ -60,7 +60,7 @@ jobs:
          env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
-          tag_name: v0.1
-          name: TWRP-9.0
+          tag_name: v0.2
+          name: TWRP-10.0
           files: | 
             work/out/target/product/vince/recovery.img
