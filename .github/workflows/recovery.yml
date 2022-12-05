@@ -13,9 +13,9 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/mauronofrio/platform_manifest_twrp_omni.git -b twrp-10.0-final
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11
   DEVICE: vince
-  DT_LINK: https://github.com/Bhav06/android_device_xiaomi_vince-twrp.git
+  DT_LINK: https://github.com/Bhav06/android_device_xiaomi_vince-twrp.git -b android-11.0
   DT_PATH: device/xiaomi/vince
   TARGET: recoveryimage
   TZ: Asia/Kolkata
@@ -53,7 +53,7 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
+              . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
              
        - name: Release recovery image
          uses: softprops/action-gh-release@v1
@@ -61,6 +61,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          with:
           tag_name: v1.0.1
-          name: TWRP-3.7.0_10.1 (Vince)
+          name: TWRP-3.7.0_11.1 (Vince)
           files: | 
             work/out/target/product/vince/recovery.img
